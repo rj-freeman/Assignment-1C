@@ -229,7 +229,26 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 	@media screen and (min-width: 60em) {
 
+		.cards {
+			max-width: none;
+			margin: 1em 0;
+			display: grid;
+			grid-template-columns: repeat(2, 25em);
+			grid-gap: 1em;
+			justify-content: center;
+		}
 
+		.card {
+			margin: 0;
+		}
+
+		.double {
+			grid-row: span 3;
+		}
+
+		.double .card {
+			display: block;
+		}
 
 	}
 
